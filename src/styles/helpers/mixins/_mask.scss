@@ -1,0 +1,5 @@
+@mixin mask() {
+	transition: background 400ms ease-out 170ms;
+	background-color: #000;
+	width: 100%
+}

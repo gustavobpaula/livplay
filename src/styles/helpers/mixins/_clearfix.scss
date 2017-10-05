@@ -1,0 +1,17 @@
+//
+// Generates CSS that will clear both left
+// and right floats.
+//
+// Example:
+//  `@include clearfix()`
+//
+//
+@mixin clearfix() {
+	& {
+		&:after{
+			content: "";
+			clear: both;
+			display: table;
+		}
+	}
+}

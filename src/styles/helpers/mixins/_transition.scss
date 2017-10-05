@@ -1,0 +1,12 @@
+// To use singleTransition() in a @media querie, set the variable "$media" to "true"
+// because SASS can't @extend a module or a css class inside of a @media querie
+
+//rewriting all mixing 'cause gulp-ruby-sass
+@mixin singleTransition($time: 250) {
+	transition: all #{$time}ms ease-out;
+}
+
+@mixin transition($property, $duration: 250, $timing-function: ease-out) {
+	transition: $property #{$duration}ms #{$timing-function};
+}
+

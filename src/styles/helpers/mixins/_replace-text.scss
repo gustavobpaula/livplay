@@ -1,0 +1,5 @@
+@mixin replaceText ($bg-img, $x, $y) {
+	background: transparent url($bg-img) $x $y no-repeat;
+	overflow: hidden;
+	text-indent: -99999cm;
+}

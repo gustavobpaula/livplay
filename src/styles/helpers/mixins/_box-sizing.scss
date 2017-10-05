@@ -1,0 +1,4 @@
+// Box sizing
+@mixin box-sizing($boxmodel) {
+	box-sizing: $boxmodel;
+}

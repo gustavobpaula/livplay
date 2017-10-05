@@ -1,0 +1,10 @@
+@mixin simpleGradient($from-color, $to-color) {
+	background-color: mix($from-color, $to-color); /* Fallback */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+	background: -webkit-linear-gradient(to bottom, $from-color 0%, $to-color 100%);
+	background:    -moz-linear-gradient(to bottom, $from-color 0%, $to-color 100%);
+	background:     -ms-linear-gradient(to bottom, $from-color 0%, $to-color 100%);
+	background:      -o-linear-gradient(to bottom, $from-color 0%, $to-color 100%);
+	background:         linear-gradient(to bottom, $from-color 0%, $to-color 100%);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
+}

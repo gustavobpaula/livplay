@@ -1,0 +1,27 @@
+@mixin spinner(
+	$color: red,
+	$diameter: 25px,
+	$stroke: 2px,
+	$background-color: #eee,
+	$sides: 2
+){
+	border-radius: 100%;
+	animation: rotation .7s linear infinite;
+	border: $stroke solid $background-color;
+	border-top-color: $color;
+	display: inline-block;
+	font-size: $diameter;
+	height: 1em;
+	margin: 0 auto;
+	padding-top: ($diameter/2);
+	position: absolute;
+	right: 0;
+	top: 20%;
+	width: 1em!important;
+	@if $sides >= 2 {
+		border-right-color: $color;
+	}
+	@if $sides >= 3 {
+		border-bottom-color: $color;
+	}
+}

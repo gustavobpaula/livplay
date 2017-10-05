@@ -1,0 +1,27 @@
+{
+  "name": "jussi-base-lp",
+  "description": "Title LP",
+  "version": "1.2.4",
+  "author": "Lucas Monteverde, Willian Siqueira",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "del": "^2.2.0",
+    "eslint-plugin-import": "^1.12.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-newer": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sass-lint": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglifyjs": "^0.4.4",
+    "gulp-util": "^3.0.7",
+    "gulp-preprocess": "^2.0.0",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  }
+}
