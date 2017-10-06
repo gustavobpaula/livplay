@@ -48,10 +48,6 @@
 @import "components/colors";
 @import "components/buttons";
 
-// Pages
-@import "pages/home";
-
-
 // Helpers
 @import "base/print";
 
@@ -61,4 +57,15 @@ body {
 	color: #fff;
 	background-color: #362252;
 	font-family: 'Neris-Light'
+}
+
+header {
+	ul {
+		li{
+			display: inline-block;
+			&:first-child {
+				border-right: 1px solid;
+			}
+		}
+	}
 }
