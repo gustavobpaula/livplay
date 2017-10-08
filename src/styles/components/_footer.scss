@@ -1,0 +1,43 @@
+footer {
+	ul {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		max-width: 100%;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			list-style: none;
+			max-width: calc(100%  / 7);
+			overflow: hidden;
+			display: grid;
+			@include breakpoint(small, "max") {
+				max-width: calc(100%  / 3);
+			}
+			&.img_footer_left,
+			&.img_footer_right {
+				max-width: calc(100%  / 14);
+				@include breakpoint(small, "max") {
+					display: none;
+				}
+			}
+
+			img {
+				width: 100%;
+			}
+
+			&:not(.img_footer_right):not(.img_footer_left) {
+				img {
+					transition: all .3s ease;
+					&:hover {
+						transform: scale(1.1);
+					}
+
+				}
+			}
+
+
+		}
+	}
+}

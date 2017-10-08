@@ -71,6 +71,17 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
 }
 
+@mixin horizontalGradient($from-color, $to-color) {
+	background-color: mix($from-color, $to-color); /* Fallback */
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from($from-color), to($to-color));
+	background: -webkit-linear-gradient(to right, $from-color 0%, $to-color 100%);
+	background:    -moz-linear-gradient(to right, $from-color 0%, $to-color 100%);
+	background:     -ms-linear-gradient(to right, $from-color 0%, $to-color 100%);
+	background:      -o-linear-gradient(to right, $from-color 0%, $to-color 100%);
+	background:         linear-gradient(to right, $from-color 0%, $to-color 100%);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}',GradientType=1)";
+}
+
 @mixin wFull() {
 	@extend %wFull;
 }

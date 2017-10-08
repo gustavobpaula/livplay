@@ -43,7 +43,7 @@
 }
 
 @font-face {
-	font-family: 'Neris-SemiBold';
+	font-family: 'Neris';
 	src: url('/dist/fonts/Neris-SemiBold.eot');
 	src: url('/dist/fonts/Neris-SemiBold.woff2') format('woff2'),
 	url('/dist/fonts/Neris-SemiBold.woff') format('woff'),
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-	font-family: 'Neris-SemiBoldItalic';
+	font-family: 'Neris';
 	src: url('/dist/fonts/Neris-SemiBoldItalic.eot');
 	src: url('/dist/fonts/Neris-SemiBoldItalic.woff2') format('woff2'),
 	url('/dist/fonts/Neris-SemiBoldItalic.woff') format('woff'),
@@ -65,7 +65,7 @@
 }
 
 @font-face {
-	font-family: 'Neris-Thin';
+	font-family: 'Neris';
 	src: url('/dist/fonts/Neris-Thin.eot');
 	src: url('/dist/fonts/Neris-Thin.woff2') format('woff2'),
 	url('/dist/fonts/Neris-Thin.woff') format('woff'),
@@ -76,7 +76,7 @@
 }
 
 @font-face {
-	font-family: 'Neris-ThinItalic';
+	font-family: 'Neris';
 	src: url('/dist/fonts/Neris-ThinItalic.eot');
 	src: url('/dist/fonts/Neris-ThinItalic.woff2') format('woff2'),
 	url('/dist/fonts/Neris-ThinItalic.woff') format('woff'),
@@ -87,7 +87,7 @@
 }
 
 @font-face {
-	font-family: 'Neris-Black';
+	font-family: 'Neris';
 	src: url('/dist/fonts/Neris-Black.eot');
 	src: url('/dist/fonts/Neris-Black.woff2') format('woff2'),
 	url('/dist/fonts/Neris-Black.woff') format('woff'),
@@ -98,7 +98,7 @@
 }
 
 @font-face {
-	font-family: 'Anurati-Regular';
+	font-family: 'Anurati';
 	src: url('/dist/fonts/Anurati-Regular.eot');
 	src: url('/dist/fonts/Anurati-Regular.woff2') format('woff2'),
 	url('/dist/fonts/Anurati-Regular.woff') format('woff'),
@@ -108,7 +108,36 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Autorich';
+	src: url('/dist/fonts/autorich_sans-webfont.woff2') format('woff2'),
+	url('/dist/fonts/autorich_sans-webfont.woff') format('woff'),
+	url('/dist/fonts/AutorichSans.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
 
+@font-face {
+	font-family: 'Autorich';
+	src: url('/dist/fonts/autorich_sans_lite-webfont.woff2') format('woff2'),
+	url('/dist/fonts/autorich_sans_lite-webfont.woff') format('woff'),
+	url('/dist/fonts/AutorichSansLite.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+$base-font-size         : 16px !default;
+$base-line-height       : 24px !default;
+
+$font-size: #{($base-font-size / 16px) * 1em};
+$line-height-integer: #{$line-height-ratio};
+$base-font-family         : 'Neris', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+
+body {
+	font: normal normal $font-size/$line-height-integer $base-font-family;
+	font-weight: normal;
+}
 
 
 
