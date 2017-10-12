@@ -1,7 +1,7 @@
 <?php
 $servername = "54.207.55.241";
 $username = "livplay";
-$password = "*yowExtSzoh2H";
+$password = "yowExtSzoh2H";
 $dbname = "livplay";
 
 $name = $_POST["nome"];
