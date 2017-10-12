@@ -1,0 +1,45 @@
+.send-cupom {
+	width: 100%;
+	background: url('/img/bg-obrigado-cupom.jpg') center no-repeat;
+	@include breakpoint(small, "max") {
+		background: none;
+	}
+
+	.container {
+		position: relative;
+		min-height: 1138px;
+		@include breakpoint(small, "max") {
+			min-height: 0;
+		}
+	}
+
+	.form-send-cupom {
+		position: absolute;
+		bottom: 200px;
+		right: 0;
+		max-width: 310px;
+		text-align: center;
+		font-family: Neris, Arial;
+		@include breakpoint(small, "max") {
+			position: static;
+			margin: 30px auto 0 auto;
+			padding: 60px 0;
+		}
+		form {
+			max-width: 100%;
+			margin-top: 30px;
+		}
+		p {
+			@include rfs(48);
+			font-weight: 100;
+			margin: 0;
+			line-height: 100%;
+		}
+		h2 {
+			@include rfs(90);
+			font-weight: 600;
+			margin: 0;
+			line-height: 100%;
+		}
+	}
+}

@@ -40,10 +40,12 @@ header {
 		}
 
 		&.social {
-			li:first-child {
-				border-left: 1px solid;
-				padding-left: 10px;
-				margin-left: 10px;
+			@include breakpoint(medium, "max") {
+				li:first-child {
+					border-left: 1px solid;
+					padding-left: 10px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}

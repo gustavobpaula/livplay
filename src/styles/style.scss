@@ -50,6 +50,9 @@
 @import "components/header";
 @import "components/footer";
 @import "components/categories";
+@import "components/home";
+@import "components/obrigado";
+@import "components/confirmacao";
 
 // Helpers
 @import "base/print";
@@ -82,9 +85,24 @@ section.title {
 	&.obrigado {
 		width: 100%;
 		background: url('/img/bg-obrigado.jpg') top center no-repeat;
-		height: 940px;
+		min-height: 940px;
+		max-width:1199px;
 		position: relative;
 		text-align: center;
+		background-size: contain;
+		padding-bottom: 30px;
+		margin: 0 auto;
+		@include breakpoint(medium, "max") {
+			min-height: 740px;
+		}
+		@include breakpoint(small, "max") {
+			min-height: 600px;
+			background-size: contain;
+		}
+		@include breakpoint(extra-small, "max") {
+			min-height: 450px ;
+			background-size: 140%;
+		}
 		.cupom {
 			position: absolute;
 			bottom: 0;
@@ -98,131 +116,104 @@ section.title {
 			border-radius: 25px;
 			padding: 20px 50px;
 		}
-
-
 	}
 
-}
-
-.propriedades {
-	p {
-		@include rfs(14);
-		color: #ed1585;
-		text-align: center;
-		font-weight: 600;
-		margin-bottom: 50px;
-	}
-	ul {
-		display: flex;
-		list-style: none;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0;
-		padding: 0;
-
-		@include breakpoint(medium, "max") {
-			flex-direction: column;
-		}
-	}
-
-
-}
-
-.discount {
-	display: flex;
-	padding: 60px 0;
-	@include breakpoint(small, "max") {
-		flex-direction: column;
-		padding: 20px 0;
-	}
-	.box {
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#49395c+0,392552+100 */
-		background: #49395c; /* Old browsers */
-		background: -moz-linear-gradient(45deg, #49395c 0%, rgba(57,37,82,0) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(45deg, #49395c 0%,rgba(57,37,82,0) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(45deg, #49395c 0%,rgba(57,37,82,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49395c', endColorstr='#392552',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-		width: 50%;
-		border-radius: 280px;
-		padding: 160px 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		@include breakpoint(small, "max") {
-			width: 100%;
-			margin-bottom: 50px;
-			padding: 100px 0;
-		}
-
-		h2 {
-			@include rfs(48);
-			font-weight: 200;
-			text-align: center;
-			margin: 0;
-			line-height: 110%;
-
-		}
-
-		h1 {
-			@include rfs(175);
-			margin: 0;
-			font-family: 'Autorich', Arial;
-			font-weight: 200;
-			line-height: 80%;
-		}
-
-		h4 {
-			@include rfs(20);
-			font-weight: 200;
-			margin: 0;
-		}
-	}
-
-	.form-register {
-		max-width: 251px;
-		input,
-		button {
-			width: 100%;
-			padding: 10px;
-			margin: 5px 0;
-			border-radius: 20px;
-			border: none;
-			color: #fff;
-			text-align: center;
-		}
-
-		input {
-			background-color: #2a1742;
-			outline: none;
-			&::placeholder {
-				color: #fff;
-			}
-		}
-		button {
-			&:after {
-				opacity: 0;
-				@include horizontalGradient(#ed1486, #ff5756);
-			}
-
-			&:before {
-				opacity: 1;
-				@include horizontalGradient(#ff5756, #ed1486);
-			}
-		}
-
-	}
-
-	.social-share {
-		max-width: 251px;
+	&.confirmacao {
 		width: 100%;
-		margin-top: 60px;
-		a {
-			width: 100%;
-			display: block;
+		background: url('/img/bg-confirmacao.jpg') center top no-repeat;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-indent: -99999px;
+		color: transparent;
+		background-size: contain;
+		@include breakpoint(small, "max") {
+			min-height: 381px;
+			background: url('/img/bg-confirmacao2.jpg') center top no-repeat;
+			background-size: 130%;
 		}
+	}
+
+}
+
+form {
+	max-width: 251px;
+	input,
+	button {
+		width: 100%;
+		padding: 10px;
+		margin: 5px 0;
+		border-radius: 20px;
+		border: none;
+		color: #fff;
+		text-align: center;
+	}
+
+	input {
+		background-color: #2a1742;
+		outline: none;
+		&::placeholder {
+			color: #fff;
+		}
+	}
+	button {
+		&:after {
+			opacity: 0;
+			@include horizontalGradient(#ed1486, #ff5756);
+		}
+
+		&:before {
+			opacity: 1;
+			@include horizontalGradient(#ff5756, #ed1486);
+		}
+	}
+
+}
+
+.box {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#49395c+0,392552+100 */
+	background: #49395c; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #49395c 0%, rgba(57,37,82,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #49395c 0%,rgba(57,37,82,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #49395c 0%,rgba(57,37,82,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49395c', endColorstr='#392552',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	width: 50%;
+	border-radius: 280px;
+	padding: 160px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include breakpoint(small, "max") {
+		width: 100%;
+		margin-bottom: 50px;
+		padding: 100px 0;
+	}
+
+	h2 {
+		@include rfs(48);
+		font-weight: 200;
+		text-align: center;
+		margin: 0;
+		line-height: 110%;
+
+	}
+
+	h1 {
+		@include rfs(175);
+		margin: 0;
+		font-family: 'Autorich', Arial;
+		font-weight: 200;
+		line-height: 80%;
+	}
+
+	h4 {
+		@include rfs(20);
+		font-weight: 200;
+		margin: 0;
 	}
 
 	.share-facebook {
@@ -250,36 +241,4 @@ section.title {
 	}
 }
 
-.btn-gradient {
-	background-size:10px 200px;
-	border-radius: 20px;
-	border: none;
-	color: #fff;
-	margin: 5px 0;
-	padding: 10px;
-	position: relative;
-	text-align: center;
-	transition: background-position .3s ease;
-	width: 100%;
-	z-index: 2;
-	span {
-		z-index: 3;
-		position: relative;
-	}
-	&:after,
-	&:before {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		content: '';
-		top: 0;
-		left: 0;
-		border-radius: 20px;
-		z-index: 1;
-		transition: opacity .3s ease;
-	}
-	&:hover {
-		&:before { opacity: 0 !important; }
-		&:after { opacity: 1 !important; }
-	}
-}
+

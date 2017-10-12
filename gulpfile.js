@@ -14,10 +14,12 @@ var paths = {
 	images: 'src/images/**/*.{png,jpeg,jpg,svg,gif}',
 	fonts:  'src/fonts//**/*',
 	html: 'src/*.html',
+	php: 'src/server/*.php',
 	extras: ['src/*.*', '!src/*.html'],
 	dest: {
 		scripts : 'dist/js',
 		styles: 'dist/css',
+		server: 'dist/server',
 		images: 'dist/img',
 		fonts: 'dist/fonts',
 		html: 'dist/html',
@@ -55,6 +57,12 @@ gulp.task('fonts', function () {
 	return gulp.src(paths.fonts)
 		.pipe($.newer(paths.dest.fonts))
 		.pipe(gulp.dest(paths.dest.fonts));
+});
+
+gulp.task('php', function () {
+	return gulp.src(paths.php)
+		.pipe($.newer(paths.dest.server))
+		.pipe(gulp.dest(paths.dest.server));
 });
 
 gulp.task('scripts', ['lint'], function () {
@@ -114,9 +122,10 @@ gulp.task('serve', ['watch'], function () {
 	});
 });
 
-gulp.task('watch', ['html', 'scripts', 'styles', 'images', 'fonts', 'extras'], function(){
+gulp.task('watch', ['html', 'scripts', 'php', 'styles', 'images', 'fonts', 'extras'], function(){
 	gulp.watch(paths.html, ['html']);
 	gulp.watch(paths.scripts, ['scripts']);
+	gulp.watch(paths.php, ['php']);
 	gulp.watch(paths.styles, ['styles']);
 	gulp.watch(paths.images, ['images']);
 	gulp.watch(paths.fonts, ['fonts']);
@@ -129,5 +138,5 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('deploy', ['clean'], function () {
 	$.util.env.production = true;
-	gulp.start(['html', 'scripts', 'styles', 'images', 'fonts', 'extras']);
+	gulp.start(['html', 'scripts','php', 'styles', 'images', 'fonts', 'extras']);
 });

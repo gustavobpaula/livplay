@@ -1,0 +1,40 @@
+.confirmacao {
+	width: 100%;
+	text-indent: 0 !important;
+	color: #fff !important;
+	.container {
+		position: relative;
+		min-height: 1733px;
+		@include breakpoint(large, "max") {
+			min-height: 1000px;
+		}
+		@include breakpoint(small, "max") {
+			min-height: 0;
+		}
+		.social-share {
+			width: 100%;
+			margin-top: 50px;
+		}
+		.box {
+			background: transparent;
+			position: absolute;
+			bottom: 200px;
+			right: 0;
+			padding: 0;
+			max-width: 310px;
+			text-align: center;
+			font-family: Neris, Arial;
+			@include breakpoint(large, "max") {
+				bottom:80px;
+			}
+			@include breakpoint(small, "max") {
+				position: static;
+				margin: 120% auto 0 auto;
+			}
+			.btn-gradient {
+				width: 100% !important;
+				display: block;
+			}
+		}
+	}
+}
