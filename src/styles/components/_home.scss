@@ -16,6 +16,9 @@
 
 		@include breakpoint(medium, "max") {
 			flex-direction: column;
+			li {
+				margin: 10px 0;
+			}
 		}
 	}
 
